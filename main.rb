@@ -1,6 +1,6 @@
 # Оценка уровня общительности (тест В.Ф. Ряховского)
-require_relative 'test'
-require_relative 'result_printer'
+require_relative 'lib/test'
+require_relative 'lib/result_printer'
 name = ARGV[0]
 
 name = 'Инкогнито' if name.nil?
