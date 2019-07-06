@@ -9,14 +9,15 @@ puts "Доброго времени суток, #{name}. Ответьте на �
 
 test = Test.new
 result = ResultPrinter.new(name)
-until test.complited?
+until test.completed?
   puts test.ask
   user_input = nil
   until test.user_input_valid?(user_input)
     puts 'Введите: 1 если ваш ответ да, или 2 если нет, или 3 если иногда и нажмите Ввод'
     user_input = STDIN.gets.to_i
   end
-  test.next_qestion(user_input)
+  test.next_question(user_input)
 end
 
 result.print_status(test)
+1

@@ -2,13 +2,13 @@ class Test
   attr_reader :score
 
   def initialize
-    questions_path = "#{File.dirname(__FILE__)}/../data/questions.txt"
+    questions_path = "#{__dir__}/../data/questions.txt"
     @questions = File.readlines(questions_path, chomp: true)
     @this_question = 0
     @score = 0
   end
 
-  def complited?
+  def completed?
     @this_question >= @questions.size
   end
 
@@ -20,7 +20,7 @@ class Test
     [1, 2, 3].include?(user_input)
   end
 
-  def next_qestion(user_input)
+  def next_question(user_input)
     if user_input == 1
       @score += 2
     elsif user_input == 3
