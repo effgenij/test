@@ -1,6 +1,6 @@
 class ResultPrinter
   def initialize(name)
-    results_path = "#{File.dirname(__FILE__)}/../data/results.txt"
+    results_path = "#{__dir__}/../data/results.txt"
     @results = File.readlines(results_path, chomp: true)
 
     @name = name
